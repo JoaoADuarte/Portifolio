@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+    
+</head>
+
+    <body class="bg-slate-950">
+        <!--Menu de NAVEGAÇÃO-->
+        <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur shadow-md">
+            <div class="max-w-7xl mx-auto">
+                <ul class="flex flex-wrap justify-center text-sky-500 font-medium text-sm sm:text-base space-x-2 px-4 py-3">
+                <li>
+                    <a href="#inicio" class="group relative pb-2 sm:pb-4 px-2 sm:px-4 text-sky-500 hover:text-white transition-colors duration-300">
+                        Início
+                        <span class="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 origin-left"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#sobre" id="link-menu" class="group relative pb-2 sm:pb-4 px-2 sm:px-4 text-sky-500 hover:text-white transition-colors duration-300">
+                        Sobre
+                        <span class="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 origin-left"></span>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#projetos" id="link-menu" class="group relative pb-2 sm:pb-4 px-2 sm:px-4 text-sky-500 hover:text-white transition-colors duration-300">
+                        Projetos
+                        <span class="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 origin-left"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contato" id="link-menu" class="group relative pb-2 sm:pb-4 px-2 sm:px-4 text-sky-500 hover:text-white transition-colors duration-300">
+                        Contato
+                        <span class="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 origin-left"></span>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <header id="inicio" class="min-h-screen bg-slate-950 flex items-center justify-center px-8">
+            <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between">
+                
+                <!--Texto e ícone ao lado esquerdo-->
+                <div class="text-left p-10 md:p-0 md:ml-10">
+                    <p class="text-white text-4xl md:text-5xl font-bold">JOAO PEDRO</p>
+                    <p class="text-sky-500 text-xl mt-2">DEV</p>
+                
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.linkedin.com/in/joão-pedro-16379722b" target="_blank" class="text-white text-2xl hover:text-sky-500"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://github.com/JoaoADuarte" target="_blank" class="text-white text-2xl hover:text-gray-400"><i class="ri-github-fill"></i></a>
+                        <a href="#" class="text-white text-2xl hover:text-pink-400" target="_blank"><i class="ri-instagram-line"></i></a>
+                    </div>
+                </div>
+
+            <!--Animação do ícone robot-->
+            <style>
+                @keyframes float {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-20px); }
+                    }
+                .float {
+                    animation: float 3s ease-in-out infinite;
+                }
+            </style>
+
+            <!--ícone robot-->
+            <div class="mt-8 md:mt-0 mr-10 float">
+                <i class="ri-robot-2-fill text-sky-500 text-[10rem] transition-transform duration-300 hover:scale-150"></i>
+            </div>
+
+            </div>
+        </header>
+
+
+        <!--Informações sobre usuário-->
+        <h1 class="text-gray-200 font-bold text-3xl mb-8 text-center" id="sobre">SOBRE MIM</h1>
+        
+        <section class="p-4 shadow-lg rounded-lg">
+        <div class="max-w-4xl mx-auto mb-8 flex flex-col md:flex-row items-center gap-6 p-6 rounded-lg border border-indigo-200 bg-slate-700/40 backdrop-blur-md">
+            <img src="./assets/PC.jpeg" alt="Sobre mim" class="w-64 h-64 rounded-full shadow-lg ">
+            
+            <p class="text-white text-justify">
+            Sou estudante de Ciência de Dados pela Anhanguera, com conclusão prevista para o final do primeiro semestre de 2026. Tenho grande interesse por automação, machine learning e manipulação de dados. Minha principal linguagem de programação é Python, que comecei a usar em projetos em 2023, mas estou sempre aberto a explorar novas tecnologias e linguagens conforme os desafios pedem. Também gosto de trabalhar em equipe, trocar ideias e aprender com outras pessoas.
+            </p>
+        </div>
+        </section>
+
+        <main class="mx-auto max-w-6xl px-4 py-8">
+            <h1 id="projetos" class="text-gray-200 font-bold mx-auto  text-3xl text-center mt-14 my-8">MEUS PROJETOS</h1>
+            <!--Cards de Projetos-->
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4" id="portifolio">
+                                
+                <!-- Portifólio do Cardápio -->
+                <article class="bg-gray-900 ml-4 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(12,20,71,0.6)] ease-in-out cursor-pointer" id="cardapio" data-modal-target="#cardapio-modal">                 
+                    
+                    <img src="./assets/Cardapio.jpeg" alt="Cardápio" class="w-full h-64 object-cover">
+                
+                    <div class="p-4">
+                        <h2 class="text-gray-300 text-lg font-bold">Projeto Cardápio</h2>
+                        <p class="text-gray-300 text-sm">Projeto desenvolvido para lanchonete N'Canto Mineiro.</p>
+                    </div>
+
+                </article>  
+                
+                <!--Portifólio do ChatBot-->
+                <article class="bg-gray-900 ml-4 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(12,20,71,0.6)] ease-in-out cursor-pointer" id="chatbot" data-modal-target="#chatbot-modal">                 
+                    
+                    <img src="./assets/Cardapio.jpeg" alt="ChatBot" class="w-full h-64 object-cover">
+                
+                    <div class="p-4">
+                        <h2 class="text-gray-300 text-lg font-bold">Projeto ChatBot</h2>
+                        <p class="text-gray-300 text-sm">Um <b>ChatBot</b> focado em jardinagem, feito com o modelo FLAN-T5.</p>
+                    </div>
+
+                </article>  
+                
+                <!--Portifólio do Automação-->
+                <article class="bg-gray-900 ml-4 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(12,20,71,0.6)] ease-in-out cursor-pointer" id="automacao" data-modal-target="#automacao-modal">                 
+                    
+                    <img src="./assets/Cardapio.jpeg" alt="Automação" class="w-full h-64 object-cover">
+                
+                    <div class="p-4">
+                        <h2 class="text-gray-300 text-lg font-bold">Projeto Automação</h2>
+                        <p class="text-gray-300 text-sm">Projeto desenvolvido para a Oficina NilCar.</p>
+                    </div>
+
+                </article>  
+
+                <!--Portifólio do Portifólio-->
+                <article class="bg-gray-900 ml-4 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(12,20,71,0.6)] ease-in-out cursor-pointer" id="portifolio" data-modal-target="#portifolio-modal">                 
+                    
+                    <img src="./assets/Cardapio.jpeg" alt="Portifólio" class="w-full h-64 object-cover">
+                
+                    <div class="p-4">
+                        <h2 class="text-gray-300 text-lg font-bold">Projeto Portifólio</h2>
+                        <p class="text-gray-300 text-sm">Criação desse portifólio.</p>
+                    </div>
+
+                </article>  
+            </div>
+
+        </main>
+        
+        <!--CONTATO-->
+
+        <footer class="text-gray-200 font-bold text-center mt-8 mb-4">
+        <h1 id="contato" class="text-3xl mb-4">CONTATO</h1>
+
+        <a href="https://api.whatsapp.com/send?phone=5522992213965" class="block mb-2 hover:scale-105 transition-transform duration-300">
+            <i class="ri-whatsapp-line text-2xl text-green-500 hover:text-white transition-colors duration-30"></i> 
+            <span class="ml-2">Entre em contato pelo WhatsApp.</span>
+        </a>
+
+        <a href="mailto:joaopedroad@hotmail.com" class="block mb-2 hover:scale-105 transition-transform duration-300">
+            <i class="ri-mail-send-line text-2xl text-red-500 hover:text-white transition-colors duration-30"></i> 
+            <span class="ml-2">joaopedroad@hotmail.com.</span>
+        </a>
+        </footer>
+
+
+        <!--Modal para apresentação dos projetos-->
+    <div class="bg-black/60 flex items-center w-full h-full fixed top-0 left-0 z-[99] hidden justify-center" id="cardapio-modal">
+        
+        <div class="bg-slate-950 overflow-auto relative  center p-5 rounded-md max-w-3xl m-5 h-[95vh] flex flex-col">
+
+            <button class="fechar-modal-btn absolute top-4 right-4 text-red-500 text-xl">
+                <i class="ri-close-large-fill text-white p-4"></i>
+            </button>
+
+            <h2 class="text-white text-center bg-blue-950 rounded-lg font-bold mb-4">Projeto Cardápio</h2>
+
+            <section class="bg-slate-950  text-slate-100 px-6 py-12 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 border-b border-slate-700 pb-2">Projeto: Cardápio Digital Interativo</h2>
+                
+                <p class="mb-4">
+                    Neste projeto, desenvolvi um cardápio digital totalmente funcional, atualmente em operação. A aplicação permite que o cliente monte seu pedido, 
+                    que é então enviado diretamente ao estabelecimento via WhatsApp.
+                </p>
+
+                <p class="mb-4">
+                    A estrutura do projeto foi construída utilizando <span class="font-semibold">HTML</span>, <span class="font-semibold">JavaScript</span> e o framework <span class="font-semibold">Tailwind CSS</span>, 
+                    escolhido por sua praticidade e pela significativa aceleração no processo de estilização. O desenvolvimento foi realizado no <span class="font-semibold">Visual Studio Code</span>, com o auxílio das extensões 
+                    <em>Live Server</em> — para visualização em tempo real da página — e <em>Tailwind CSS IntelliSense</em>, que otimizou a escrita das classes CSS.
+                </p>
+
+                <p class="mb-4">
+                    A hospedagem foi feita por meio da plataforma <span class="font-semibold">Vercel</span>, selecionada por sua agilidade e facilidade de configuração. Trata-se de um projeto real, 
+                    em funcionamento, mas com melhorias em andamento. Entre as funcionalidades previstas, estão:
+                </p>
+
+                <ul class="list-disc list-inside mb-4 space-y-1">
+                    <li>Criação de uma área de cadastro para que usuários possam armazenar seus dados;</li>
+                    <li>Implementação de uma interface administrativa que permita ao empreendedor editar o cardápio sem acesso direto ao código-fonte.</li>
+                </ul>
+
+                <p class="mb-4">
+                    Sinta-se à vontade para se inspirar neste projeto. Caso precise de suporte ou tenha interesse em colaborar, meus contatos estão disponíveis neste portfólio. Terei prazer em ajudar.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <div class="bg-black/60 flex items-center w-full h-full fixed top-0 left-0 z-[99] hidden justify-center" id="chatbot-modal">
+        
+        <div class="bg-slate-950 overflow-auto relative  center p-5 rounded-md max-w-3xl m-5 h-[95vh] flex flex-col">
+
+            <button class="fechar-modal-btn absolute top-4 right-4 text-red-500 text-xl">
+                <i class="ri-close-large-fill text-white p-4"></i>
+            </button>
+
+            <h2 class="text-white text-center bg-blue-950 rounded-lg font-bold mb-4">Projeto ChatBot</h2>
+            <section class="bg-slate-950  text-slate-100 px-6 py-12 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 border-b border-slate-700 pb-2">Projeto: ChatBot </h2>
+                
+                <p class="mb-4">
+                Este projeto consistiu no desenvolvimento de um <span class="font-semibold">ChatBot especializado em jardinagem</span>, 
+                criado para responder a perguntas relacionadas ao tema. Foi uma iniciativa desafiadora e ambiciosa, pois envolveu tecnologias 
+                que estavam além do meu conhecimento inicial, mas que me permitiram aprender e evoluir ao longo do processo.
+                </p>
+
+                <p class="mb-4">
+                    O chatbot foi desenvolvido em <span class="font-semibold">Python</span>, utilizando o 
+                    <span class="font-semibold">Google Colab</span> como ambiente de desenvolvimento. Para a construção da base de conhecimento, 
+                    empreguei técnicas de <span class="font-semibold">Web Scraping</span>, extraindo conteúdos relevantes de páginas da web. 
+                    Os dados coletados foram tratados e organizados em um banco de dados <span class="font-semibold">SQLite</span>, garantindo 
+                    maior eficiência e estruturação das informações.
+                </p>
+
+                <p class="mb-4">
+                    Após a coleta e organização dos dados, realizei o processo de <span class="font-semibold">fine-tuning</span>. 
+                    Esse processo consiste em ajustar um modelo de inteligência artificial pré-treinado para um domínio específico 
+                    — neste caso, jardinagem — permitindo que o chatbot fornecesse respostas mais precisas, contextuais e relevantes.
+                </p>
+
+                <p class="mb-4">
+                    O resultado foi um <span class="font-semibold">ChatBot de Perguntas e Respostas (QA)</span> capaz de oferecer 
+                    informações confiáveis sobre jardinagem. Este projeto foi não apenas divertido, mas também uma grande oportunidade 
+                    de aprendizado e crescimento técnico.
+                </p>
+
+                <p class="mb-4">
+                    Sinta-se à vontade para se inspirar nesta iniciativa. O projeto completo pode ser acessado em meu 
+                    <a href="https://colab.research.google.com/drive/1ovfqwxbpH9yX-DzcIBb3h0h3YAAKPYpQ" class="font-semibold text-sky-500">Google Drive.</a>
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <div class="bg-black/60 flex items-center w-full h-full fixed top-0 left-0 z-[99] hidden justify-center" id="automacao-modal">
+        
+        <div class="bg-slate-950 overflow-auto relative  center p-5 rounded-md max-w-3xl m-5 h-[95vh] flex flex-col">
+
+            <button class="fechar-modal-btn absolute top-4 right-4 text-red-500 text-xl">
+                <i class="ri-close-large-fill text-white p-4"></i>
+            </button>
+
+            <h2 class="text-white text-center bg-blue-950 rounded-lg font-bold mb-4">Projeto Automação Financeiro</h2>
+            <section class="bg-slate-950  text-slate-100 px-6 py-12 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 border-b border-slate-700 pb-2">Projeto: Automação Financeiro </h2>
+                
+                <p class="mb-4">
+                    Este projeto foi desenvolvido para a empresa <span class="font-semibold">NilCar</span>, com o objetivo de 
+                    otimizar a gestão financeira por meio de um <span class="font-semibold">bot automatizado</span>. 
+                    A solução criada auxilia no controle de lucros, gastos e clientes, trazendo mais eficiência e praticidade 
+                    ao processo administrativo.
+                </p>
+
+                <p class="mb-4">
+                    O sistema utiliza como base uma planilha em <span class="font-semibold">Excel</span>, 
+                    estruturada para registrar todas as movimentações financeiras da empresa. 
+                    Essa planilha é responsável por calcular automaticamente o <span class="font-semibold">lucro bruto</span> 
+                    e o <span class="font-semibold">lucro líquido</span>, além de indicar quais clientes já efetuaram o pagamento 
+                    e quais estão com pendências.
+                </p>
+
+                <p class="mb-4">
+                    Após <span class="font-semibold">30 dias</span> — período definido pelo proprietário da oficina —, 
+                    o bot entra em ação de forma autônoma. Ele identifica os clientes com pagamentos pendentes e 
+                    envia <span class="font-semibold">mensagens de cobrança personalizadas</span>, adaptadas para cada cliente, 
+                    garantindo uma comunicação clara e eficiente.
+                </p>
+
+                <p class="mb-4">
+                    Esse projeto representou um passo importante na <span class="font-semibold">automação de processos internos</span>, 
+                    reduzindo retrabalhos manuais e proporcionando maior controle sobre a saúde financeira da empresa.
+                </p>
+
+                <p class="mb-4">
+                    Sinta-se à vontade para se inspirar neste projeto. Caso precise de suporte ou tenha interesse em colaborar, meus contatos estão disponíveis neste portfólio. Terei prazer em ajudar.
+                </p>
+
+                <p class="mb-4">
+                    Obs: Esse projeto não se encontra em meu GitHub por conter dados sensíveis da empresa.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <div class="bg-black/60 flex items-center w-full h-full fixed top-0 left-0 z-[99] hidden justify-center" id="portifolio-modal">
+        
+        <div class="bg-slate-950 overflow-auto relative  center p-5 rounded-md max-w-3xl m-5 h-[95vh] flex flex-col">
+
+            <button class="fechar-modal-btn absolute top-4 right-4 text-red-500 text-xl">
+                <i class="ri-close-large-fill text-white p-4"></i>
+            </button>
+
+            <h2 class="text-white text-center bg-blue-950 rounded-lg font-bold mb-4">Projeto Portifólio</h2>
+            <section class="bg-slate-950  text-slate-100 px-6 py-12 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 border-b border-slate-700 pb-2">Projeto: Portifólio </h2>
+                
+
+
+                <p class="mb-4">
+                    Sinta-se à vontade para se inspirar neste projeto. Caso precise de suporte ou tenha interesse em colaborar, meus contatos estão disponíveis neste portfólio. Terei prazer em ajudar.
+                </p>
+            </section>
+        </div>
+    </div>
+
+
+    </body>
+<script src="script.js"></script>
+</html>

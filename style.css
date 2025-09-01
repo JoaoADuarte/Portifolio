@@ -1,0 +1,14 @@
+@import "tailwind.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.link-menu::after {
+  background: linear-gradient(); /* Tailwind's sky-500 to blue-500 */
+  transition: width 0.5s ease; /* Tailwind's sky-500 */
+}
+
+.link-menu:hover::after {
+  width: 100%;
+}
